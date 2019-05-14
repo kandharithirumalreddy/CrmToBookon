@@ -1,0 +1,14 @@
+C:\Users\RnDFarm_Service\source\repos\BookonSync\BookonSync\bin\Debug\BookonSync.exe.config
+C:\Users\RnDFarm_Service\source\repos\BookonSync\BookonSync\bin\Debug\BookonSync.exe
+C:\Users\RnDFarm_Service\source\repos\BookonSync\BookonSync\bin\Debug\BookonSync.pdb
+C:\Users\RnDFarm_Service\source\repos\BookonSync\BookonSync\bin\Debug\Microsoft.SharePoint.Client.dll
+C:\Users\RnDFarm_Service\source\repos\BookonSync\BookonSync\bin\Debug\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\RnDFarm_Service\source\repos\BookonSync\BookonSync\bin\Debug\Microsoft.SharePoint.Client.xml
+C:\Users\RnDFarm_Service\source\repos\BookonSync\BookonSync\bin\Debug\Microsoft.SharePoint.Client.Runtime.xml
+C:\Users\RnDFarm_Service\source\repos\BookonSync\BookonSync\obj\Debug\BookonSync.csprojAssemblyReference.cache
+C:\Users\RnDFarm_Service\source\repos\BookonSync\BookonSync\obj\Debug\BookonSync.csproj.CoreCompileInputs.cache
+C:\Users\RnDFarm_Service\source\repos\BookonSync\BookonSync\obj\Debug\BookonSync.csproj.CopyComplete
+C:\Users\RnDFarm_Service\source\repos\BookonSync\BookonSync\obj\Debug\BookonSync.exe
+C:\Users\RnDFarm_Service\source\repos\BookonSync\BookonSync\obj\Debug\BookonSync.pdb
+C:\Users\RnDFarm_Service\source\repos\BookonSync\BookonSync\bin\Debug\Newtonsoft.Json.dll
+C:\Users\RnDFarm_Service\source\repos\BookonSync\BookonSync\bin\Debug\Newtonsoft.Json.xml

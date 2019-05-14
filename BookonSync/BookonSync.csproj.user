@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments>"Kontaktperson" "[{%27fieldName%27:%27Title%27,%27value%27:%27Person1 Person%27},{%27fieldName%27:%27MailGroup%27,%27value%27:%274%3b#%3b#5%3b#%27}]"</StartArguments>
+  </PropertyGroup>
+</Project>
