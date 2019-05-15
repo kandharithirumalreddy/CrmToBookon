@@ -1,0 +1,8 @@
+﻿"Organisation" "Create" "[{'FieldName':'companyName','Value':'Test company1'},{'FieldName':'address1','Value':'Test adress1'},{'FieldName':'address2','Value':'Test address2'},{'FieldName':'town','Value':'Test test'},{'FieldName':'postNumber','Value':'900'},{'FieldName':'phoneNumber','Value':'1212121'},{'FieldName':'country','Value':'Denmark'},{'FieldName':'accountId','Value':'30700'},{'FieldName':'industryCode','Value':'IT og telekommunikation'}]"
+
+"Organisation" "Update" "[{'FieldName':'companyName','Value':'Test company1111'},{'FieldName':'address1','Value':'Test adress1111'},{'FieldName':'address2','Value':'Test address2222'},{'FieldName':'town','Value':'Test test'},{'FieldName':'postNumber','Value':'910'},{'FieldName':'phoneNumber','Value':'12121213'},{'FieldName':'accountId','Value':'39'},{'FieldName':'industryCode','Value':'Industri (fremstillingsvirksomhed & produktion)'}]"
+
+
+"Kontaktperson" "Create" "[{'FieldName':'firstName','Value':'Person1'},{'FieldName':'lastName','Value':'Person2'},{'FieldName':'email','Value':'Test@test.net'},{'FieldName':'telephone','Value':'222222222'},{'FieldName':'mobilePhone','Value':'33333333'},{'FieldName':'accountId','Value':'30700'},{'FieldName':'contactId','Value':'30710'}]"
+
+"Kontaktperson" "Update" "[{'FieldName':'firstName','Value':'Person111'},{'FieldName':'lastName','Value':'Person2222'},{'FieldName':'email','Value':'Test111@test.net'},{'FieldName':'telephone','Value':'4444422'},{'FieldName':'mobilePhone','Value':'7773333'},{'FieldName':'accountId','Value':'34'},{'FieldName':'contactId','Value':'30710'}]"
