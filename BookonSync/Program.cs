@@ -9,9 +9,10 @@ namespace BookonSync
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
             //Console.WriteLine("SharePoint Online site URL:");
+            int returnId = 0;
             string webSPOUrl = "https://bookon.dkbs.dk";
             //string webSPOUrl = "http://rnd06:55001";
                         
@@ -262,6 +263,7 @@ namespace BookonSync
                                 {
                                     ListItemCreationInformation itemCreateInfo = new ListItemCreationInformation();
                                     ListItem newItem = lst.AddItem(itemCreateInfo);
+                                   // var itemId=newItem.Id;
                                     newItem["ContentTypeId"] = ct.Id;
 
                                     if (itemMetaData.Find(x => x.FieldName == "companyName") != null)
@@ -306,6 +308,9 @@ namespace BookonSync
                                     }
                                     newItem.Update();
                                     context.ExecuteQuery();
+                                    returnId=newItem.Id;
+                                    //SqlColumnId=scope_identity;
+                                   
                                 }
                                 else if (actionType == "Update")
                                 {
@@ -367,6 +372,10 @@ namespace BookonSync
                                             {
                                                 updatableItem["IndustryCode"] = industryCodeItemId;
                                             }
+                                            //if (itemMetaData.Find(x => x.FieldName == "accountId") != null)
+                                            //{
+                                            //    updatableItem["accountID"] = itemMetaData.Find(x => x.FieldName == "accountId").Value;
+                                            //}
                                             updatableItem.Update();
                                             context.ExecuteQuery();
                                         }
@@ -495,29 +504,32 @@ namespace BookonSync
                 }
                 Console.WriteLine("End");
                 Console.ReadLine();
+                
             }
+
             catch (Exception ex)
             {
                 Console.WriteLine("Error is: " + ex.Message);
                 Console.WriteLine("Try to run script again.");
                 Console.ReadLine();
             }
+            return returnId;
         }
-        private static ListItem getCustomerItem(ClientContext context, List customersLst, string accountId, string searchableField)
+        private static ListItem getCustomerItem(ClientContext context, List customersLst, string accountId, string searchableField) 
         {
             ListItem result = null;
-            CamlQuery query = new CamlQuery();
-            query.ViewXml = @"<View><Query><Where><Eq><FieldRef Name='"+searchableField+@"' /><Value Type='Text'>" + accountId + @"</Value></Eq></Where></Query>
-                                                        <ViewFields><FieldRef Name='ID'/><FieldRef Name='Title'/><FieldRef Name='Address'/><FieldRef Name='Address2'/><FieldRef Name='ZipMachingFilter'/><FieldRef Name='Country'/><FieldRef Name='Phone'/><FieldRef Name='IndustryCode'/></ViewFields></View>";
-            ListItemCollection customerColl = customersLst.GetItems(query);
-            context.Load(customerColl);
-            context.ExecuteQuery();
-            if (customerColl.Count == 1)
-            {
-                result = customerColl[0];
-            }
-            else
-            {
+            //CamlQuery query = new CamlQuery();
+            //query.ViewXml = @"<View><Query><Where><Eq><FieldRef Name='"+searchableField+@"' /><Value Type='Text'>" + accountId + @"</Value></Eq></Where></Query>
+            //                                            <ViewFields><FieldRef Name='ID'/><FieldRef Name='Title'/><FieldRef Name='Address'/><FieldRef Name='Address2'/><FieldRef Name='ZipMachingFilter'/><FieldRef Name='Country'/><FieldRef Name='Phone'/><FieldRef Name='IndustryCode'/></ViewFields></View>";
+            //ListItemCollection customerColl = customersLst.GetItems(query);
+            //context.Load(customerColl);
+            //context.ExecuteQuery();
+            //if (customerColl.Count == 1)
+            //{
+            //    result = customerColl[0];
+            //}
+            //else
+            //{
                 CamlQuery query2 = new CamlQuery();
                 query2.ViewXml = @"<View><Query><Where><Eq><FieldRef Name='ID' /><Value Type='Text'>" + accountId + @"</Value></Eq></Where></Query>
                                                         <ViewFields><FieldRef Name='Title'/><FieldRef Name='Address'/><FieldRef Name='Address2'/><FieldRef Name='ZipMachingFilter'/><FieldRef Name='Country'/><FieldRef Name='Phone'/><FieldRef Name='IndustryCode'/></ViewFields></View>";
@@ -528,7 +540,7 @@ namespace BookonSync
                 {
                     result = customerColl2[0];
                 }
-            }
+            //}
 
             return result;
         }
